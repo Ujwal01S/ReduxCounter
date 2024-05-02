@@ -1,19 +1,19 @@
 
 
-import { legacy_createStore as createStore} from 'redux';
+import { createStore} from 'redux';
 
-const initialState= {counter: 0};
+const initialState= {count: 0};
 
 const counterReducer= (state= initialState, action)=> {
 
     if (action.type === 'increment') {
         return {
-            counter: counter + 1
+            count: state.count + 1
         };
     }
     if (action.type === 'decrement') {
         return {
-            counter: counter -1
+            count: state.count -1
         };
     }
     return state;
